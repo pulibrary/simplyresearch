@@ -2,6 +2,7 @@
 
 import { defineConfig } from "eslint/config";
 import reactPlugin from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
 import eslintPluginPrettier from "eslint-config-prettier/flat";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
@@ -19,7 +20,8 @@ export default defineConfig([
     ],
     ignores: ["dist", "node_modules", ".git", "*.json"],
   },
-  reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat["jsx-runtime"],
+  reactHooks.configs["recommended-latest"],
   eslintPluginPrettier,
   eslintPluginPrettierRecommended,
 ]);
