@@ -2,7 +2,6 @@
 version: 2.1 # CircleCI configuration version
 
 commands: # https://circleci.com/docs/configuration-reference/#commands
-
   # This is a custom command to install dependencies.
   install_dependencies:
     steps:
@@ -17,28 +16,27 @@ commands: # https://circleci.com/docs/configuration-reference/#commands
           paths:
             - ./vendor/bundle
 
-      #- restore_cache:
-      #    name: Restore Yarn Package Cache
-      #    key: &yarn_key simplyresearch-yarn-cimg-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore NPM Package Cache
+          key: &npm_key simplyresearch-npm-cimg-{{ checksum "package.lock" }}
 
-      #- run:
-      #    name: Install NPM Dependencies via Yarn
-      #    command: yarn install --frozen-lockfile
+      - run:
+          name: Install NPM Dependencies
+          command: npm install
 
-      #- save_cache:
-      #    name: Save Yarn Package Cache
-      #    key: *yarn_key
-      #    paths:
-      #      - ~/.cache/yarn
+      - save_cache:
+          name: Save NPM Package Cache
+          key: *npm_key
+          paths:
+            - ~/.cache/npm
 
 # CircleCI Orbs for test coverage analysis and browser testing
 orbs:
-  coveralls: coveralls/coveralls@2.2.5
-  browser-tools: circleci/browser-tools@2.2.0
+  coveralls: coveralls/coveralls@2.2
+  browser-tools: circleci/browser-tools@2.2
 
 # CircleCI Job
 jobs:
-
   build: # Build
     working_directory: "~/simplyresearch"
 
@@ -72,10 +70,35 @@ jobs:
           name: Run rubocop
           command: bundle exec rubocop
 
+  eslint:
+    working_directory: *root
+
+    docker:
+      - *ruby_docker
+
+    steps:
+      - attach_workspace:
+          at: *root
+      - run:
+          name: Run eslint
+          command: npm run lint:check
+
+  prettier:
+    working_directory: *root
+
+    docker:
+      - *ruby_docker
+
+    steps:
+      - attach_workspace:
+          at: *root
+      - run:
+          name: Run prettier
+          command: npm run prettier:check
+
   test:
     working_directory: *root
 
-    # Docker configuration for CircleCI environment
     docker:
       - *ruby_docker
       - image: postgres:17-alpine # Specifying that we are using PostgreSQL 17 for the database in the Rails app for testing
@@ -107,5 +130,11 @@ workflows:
           requires:
             - build
       - rubocop:
+          requires:
+            - build
+      - eslint:
+          requires:
+            - build
+      - prettier:
           requires:
             - build
