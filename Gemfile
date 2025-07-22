@@ -54,9 +54,11 @@ group :development, :test do
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
 
   gem "prettier_print", "~> 1.2"
+  gem "rails-controller-testing"
   gem "rspec-rails", "~> 8.0"
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+  gem "rubocop", "~> 1.78"
   gem "rubocop-rails-omakase", require: false
   gem "simplecov", "~> 0.22"
 
