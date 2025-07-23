@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Admin, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+# RSpec.describe "User Login", type: :request do
+#   it "lets the user sign in through a form with their credentials" do
+#   get "new_admin_session_path"
+#   end
+# end
