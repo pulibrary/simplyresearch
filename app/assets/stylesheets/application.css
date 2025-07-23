@@ -8,3 +8,32 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+@font-face {
+   font-family: 'Nunito';
+   src: url('app/assets/fonts/Nunito/static/Nunito-Regular.ttf'), format("truetype");
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    font-family: 'Nunito', sans-serif;
+}
+
+button {
+    font-family: 'Nunito', sans-serif;
+}
+
+input, label, textarea, select {
+    font-family: 'Nunito', sans-serif;
+}
