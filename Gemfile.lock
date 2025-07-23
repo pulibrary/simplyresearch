@@ -461,7 +461,7 @@ DEPENDENCIES
   rspec-rails (~> 8.0)
   rubocop (~> 1.78)
   rubocop-rails-omakase
-  selenium-webdriver
+  selenium-webdriver (~> 4.34)
   simplecov (~> 0.22)
   solid_cable
   solid_cache
