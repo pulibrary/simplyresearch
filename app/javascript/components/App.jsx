@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 export default function App() {
   return (
     <>
-      <Button variant="primary">Click Me!</Button>
+      {/* <Button variant="primary">Click Me!</Button> */}
     </>
   );
 }
