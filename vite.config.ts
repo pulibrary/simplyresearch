@@ -7,4 +7,11 @@ export default defineConfig({
     RubyPlugin(),
     react(), // ← Add the React plugin
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        application: './app/javascript/entrypoints/application.jsx',
+      },
+    },
+  },
 });

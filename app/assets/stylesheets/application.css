@@ -10,32 +10,36 @@
  */
 
 @font-face {
-   font-family: 'Nunito';
-   src: url('app/assets/fonts/Nunito/static/Nunito-Regular.ttf'), format("truetype");
+  font-family: "Nunito";
+  src:
+    url("app/assets/fonts/Nunito/static/Nunito-Regular.ttf"), format("truetype");
 }
 
 h1 {
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 p {
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
 }
 
 a {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 button {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
-input, label, textarea, select {
-    font-family: 'Nunito', sans-serif;
+input,
+label,
+textarea,
+select {
+  font-family: "Nunito", sans-serif;
 }
