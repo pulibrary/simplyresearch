@@ -10,7 +10,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        application: './app/javascript/entrypoints/application.jsx',
+        application: "./app/javascript/entrypoints/application.jsx",
       },
     },
   },
