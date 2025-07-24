@@ -46,6 +46,8 @@ gem "thruster", require: false
 gem "foreman", "~> 0.88"
 gem "vite_rails", "~> 3.0"
 
+gem "aws-sdk-s3", require: false
+
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
