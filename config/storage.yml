@@ -13,6 +13,12 @@ local:
 #   region: us-east-1
 #   bucket: your_own_bucket-<%= Rails.env %>
 
+s3mock:
+  service: S3
+  # @note Please ensure that the S3Mock bucket already exists.
+  # @example: `curl --request PUT "http://localhost:9090/my-new-test-bucket/"`
+  endpoint: "http://localhost:9090/my-new-test-bucket"
+  bucket: ""
 # Remember not to checkin your GCS keyfile to a repository
 # google:
 #   service: GCS
