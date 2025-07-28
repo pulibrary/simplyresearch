@@ -1,24 +1,30 @@
-# README
+<h1 text-align:center>Welcome to simplyresearch 👋</h1>
+<p>
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> SimplyResearch is a Ruby on Rails web application where users can upload PDF files of research papers and generate custom slides in seconds
 
-Things you may want to cover:
+## Install
 
-- Ruby version
+```sh
+npm install
+```
 
-- System dependencies
+## Run tests
 
-- Configuration
+```sh
+rails test
+```
 
-- Database creation
+## Author
 
-- Database initialization
+👤 **Ranveer Singh & James Griffin**
 
-- How to run the test suite
+* Github: [@rsingh135](https://github.com/rsingh135) [@jrgriffiniii](https://github.com/jrgriffiniii)
 
-- Services (job queues, cache servers, search engines, etc.)
+## Show your support
 
-- Deployment instructions
-
-- ...
+Give a ⭐️ if this project helped you
