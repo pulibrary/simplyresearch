@@ -10,7 +10,23 @@
 ## Install
 
 ```sh
-npm install
+bundle install
+```
+
+## Key Configuration
+
+```sh
+EDITOR="nano" bin/rails credentials:edit
+```
+
+Run this command to access your credentials.yml.enc file, which is what rails uses
+to store and encrypt your secrets. Add the following to enable google sign in/sign out
+(Make sure to fill it in with your google client id and secret)
+
+```sh
+google:
+  client_id: 'your_google_client_id'
+  client_secret: 'your_google_client_secret'
 ```
 
 ## Run tests
