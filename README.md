@@ -23,7 +23,7 @@ rails test
 
 👤 **Ranveer Singh & James Griffin**
 
-* Github: [@rsingh135](https://github.com/rsingh135) [@jrgriffiniii](https://github.com/jrgriffiniii)
+- Github: [@rsingh135](https://github.com/rsingh135) [@jrgriffiniii](https://github.com/jrgriffiniii)
 
 ## Show your support
 

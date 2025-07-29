@@ -46,7 +46,12 @@ gem "thruster", require: false
 gem "foreman", "~> 0.88"
 gem "vite_rails", "~> 3.0"
 
+# Supports S3Mock for file uploads
 gem "aws-sdk-s3", require: false
+
+# Used for user sign in with google
+gem "omniauth-google-oauth2"
+gem "omniauth-rails_csrf_protection"
 
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
