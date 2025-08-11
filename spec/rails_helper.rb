@@ -1,13 +1,7 @@
 # frozen_string_literal: true
 
 ENV['RAILS_ENV'] ||= 'test'
-begin
-  require_relative '../config/environment'
-rescue FrozenError => e
-  puts "Caught FrozenError: #{e.message}"
-  puts e.backtrace.join("\n")
-  raise e
-end
+require_relative '../config/environment'
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
