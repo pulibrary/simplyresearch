@@ -64,11 +64,14 @@ group :development, :test do
 
   gem "prettier_print", "~> 1.2"
   gem "rails-controller-testing"
+  gem "rspec", "~> 3.13"
   gem "rspec-rails", "~> 8.0"
 
-  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop", "~> 1.78"
+  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  gem "rubocop-rspec_rails", "~> 2.31"
+
   gem "selenium-webdriver", "~> 4.34"
   gem "simplecov", "~> 0.22"
 
